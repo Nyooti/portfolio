@@ -184,6 +184,31 @@ body {
     text-align: center;
 }
 
+/* Enhanced Resume Download Button */
+.hero-buttons .btn-resume {
+    background: linear-gradient(90deg, #f39c12 0%, #3498db 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 36px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.hero-buttons .btn-resume i {
+    font-size: 1.2em;
+}
+.hero-buttons .btn-resume:hover {
+    background: linear-gradient(90deg, #3498db 0%, #f39c12 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.18);
+}
+
 /* Section Styles */
 section {
     padding: 80px 0;
@@ -754,4 +779,19 @@ section {
     .nav-item.dropdown.active .dropdown-menu {
         display: block;
     }
+}
+
+/* Fade effect for dynamic background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: inherit;
+    transition: opacity 1s ease;
+    opacity: 1;
+    pointer-events: none;
+}
+body.bg-fade-out::before {
+    opacity: 0;
 }
