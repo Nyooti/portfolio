@@ -10,10 +10,11 @@ A modern, responsive personal portfolio website built with HTML, CSS, and JavaSc
   - Hero section with introduction
   - About section with personal information
   - Skills section showcasing technical abilities
-  - Projects section with portfolio items
+  - Projects section with portfolio items and images
   - Work experience timeline
   - Education and certifications
   - Contact form with social links
+  - **Download Resume**: Prominent button in the navbar for downloading the latest resume (PDF)
 
 ## Getting Started
 
@@ -34,53 +35,32 @@ A modern, responsive personal portfolio website built with HTML, CSS, and JavaSc
 
 Edit the following in `index.html`:
 
-- **Name**: Replace "Your Name" throughout the file
+- **Name**: Replace "THOMAS OWINO" throughout the file
 - **Title/Role**: Update the hero subtitle
 - **Description**: Modify the about section text
 - **Contact Information**: Update email, phone, and location
 - **Social Links**: Add your actual social media URLs
 
-### 2. Profile Photo
+### 2. Project Images
 
-1. Add your profile photo to the portfolio directory
-2. Name it `profile-photo.jpg` (or update the src in HTML)
-3. Recommended size: 300x300 pixels
+- All images are stored in the `images/` folder for better organization.
+- Update project image paths in `index.html` to use the `images/` folder, e.g.:
+  ```html
+  <img src="images/e commerce.jpg" alt="E-commerce Website">
+  ```
+- Add or replace images as needed for each project.
 
-### 3. Projects
+### 3. Resume Download
 
-For each project in the projects section:
+- The resume download button is located in the navbar.
+- To update your resume, replace `Thomas Owino Resume.pdf` in the project root with your latest PDF.
+- The button will always offer the latest version for download.
 
-1. Add project images (name them `project1.jpg`, `project2.jpg`, etc.)
-2. Update project titles, descriptions, and technologies used
-3. Add actual GitHub and live demo links
+### 4. Skills, Experience, and Education
 
-### 4. Skills
+- Update the skills, work experience, and education sections in `index.html` to reflect your background.
 
-Modify the skills section to match your actual skills:
-
-- Frontend: HTML, CSS, JavaScript, React, Vue, etc.
-- Backend: Node.js, Python, PHP, etc.
-- Tools: Git, Docker, AWS, etc.
-
-### 5. Experience
-
-Update the work experience section with:
-
-- Your actual job titles
-- Company names
-- Dates
-- Responsibilities and achievements
-
-### 6. Education
-
-Replace the education section with your actual:
-
-- Degrees and certifications
-- Institutions
-- Years attended
-- Relevant details
-
-### 7. Styling
+### 5. Styling
 
 Customize the appearance in `styles.css`:
 
@@ -97,10 +77,20 @@ portfolio/
 ├── styles.css          # CSS styles
 ├── script.js           # JavaScript functionality
 ├── README.md           # This file
-├── profile-photo.jpg   # Your profile picture
-├── project1.jpg        # Project images
-├── project2.jpg
-└── project3.jpg
+├── images/             # All project and background images
+│   ├── background image 2.jpg
+│   ├── background image 3.jpg
+│   ├── background image image 1.jpg
+│   ├── e commerce.jpg
+│   ├── image 1.JPG
+│   ├── image 2.JPG
+│   ├── image 3.JPG
+│   ├── image 4.jpg
+│   ├── image 5.jpg
+│   ├── smart attendance system.jpg
+│   ├── task management.jpg
+│   └── weather dashboard.jpg
+├── Thomas Owino Resume.pdf   # Downloadable resume
 ```
 
 ## Browser Support
@@ -121,7 +111,7 @@ Simply open `index.html` in your browser to view locally.
 1. Create a new repository on GitHub
 2. Upload all files to the repository
 3. Go to Settings > Pages
-4. Select source branch (usually `main`)
+4. Select source branch (usually `main` or `master`)
 5. Your portfolio will be available at `https://username.github.io/repository-name`
 
 ### Other Hosting Options
