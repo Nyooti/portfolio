@@ -109,7 +109,7 @@ body {
     display: flex;
     align-items: center;
     color: white;
-    background: url('background image 2.jpg') center center/cover no-repeat;
+    background-image: url('images/background image image 1.jpg');
 }
 
 .hero-container {
@@ -224,7 +224,7 @@ section {
 /* About Section */
 .about {
     padding: 80px 0;
-    background: url('background image image 1.jpg') center center/cover no-repeat;
+    background-image: url('images/background image 3.jpg');
     position: relative;
 }
 
@@ -267,6 +267,7 @@ section {
 /* Skills Section */
 .skills {
     padding: 80px 0;
+    background-image: url('images/background image 2.jpg');
 }
 
 .skills-content {
@@ -397,6 +398,7 @@ section {
 /* Experience Section */
 .experience {
     padding: 80px 0;
+    background-image: url('images/image 5.jpg');
 }
 
 .timeline {
@@ -489,7 +491,7 @@ section {
 /* Education Section */
 .education {
     padding: 80px 0;
-    background: url('image 4.jpg') center center/cover no-repeat;
+    background-image: url('images/image 4.jpg');
     position: relative;
 }
 
@@ -542,7 +544,7 @@ section {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background: url('image 1.JPG') center center/cover no-repeat;
+    background-image: url('images/image 1.JPG');
     position: relative;
 }
 
@@ -781,17 +783,27 @@ section {
     }
 }
 
-/* Fade effect for dynamic background */
-body::before {
+/* Improved crossfade effect for dynamic background */
+body::before, body::after {
     content: '';
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: -1;
-    background: inherit;
-    transition: opacity 1s ease;
-    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 4s ease;
     pointer-events: none;
 }
+body::before {
+    opacity: 1;
+}
 body.bg-fade-out::before {
+    opacity: 0;
+}
+body.bg-next::after {
+    opacity: 1;
+}
+body::after {
     opacity: 0;
 }

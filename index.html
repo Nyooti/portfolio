@@ -71,6 +71,9 @@
                     </ul>
                 </li>
             </ul>
+            <div class="resume-dropdown" style="position: relative; display: inline-block; margin-left: 2em;">
+                <a href="Thomas Owino Resume.pdf" class="btn btn-resume" download><i class="fas fa-file-download"></i>Download Resume</a>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -119,10 +122,6 @@
                             <p>Happy Clients</p>
                         </div>
                     </div>
-                </div>
-                <div class="about-resume-btn" style="margin-top:2em; text-align:center;">
-                    <a href="THOMAS OWINO - RESUME.pdf" class="btn btn-resume" download><i class="fas fa-file-download"></i>Download Resume (PDF)</a>
-                    <a href="#contact" class="btn btn-primary" style="margin-left: 1em; margin-top: 1em;">Learn More About Me</a>
                 </div>
             </div>
         </div>
@@ -201,7 +200,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="smart attendance system.jpg" alt="Smart Attendance System">
+                        <img src="images/smart attendance system.jpg" alt="Smart Attendance System">
                     </div>
                     <div class="project-content">
                         <h3>Smart Attendance System</h3>
@@ -218,7 +217,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="e commerce.jpg" alt="E-commerce Website">
+                        <img src="images/e commerce.jpg" alt="E-commerce Website">
                     </div>
                     <div class="project-content">
                         <h3>E-commerce Website</h3>
@@ -234,7 +233,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="task management.jpg" alt="Task Management App">
+                        <img src="images/task management.jpg" alt="Task Management App">
                     </div>
                     <div class="project-content">
                         <h3>Task Management App</h3>
@@ -250,7 +249,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="weather dashboard.jpg" alt="Weather Dashboard">
+                        <img src="images/weather dashboard.jpg" alt="Weather Dashboard">
                     </div>
                     <div class="project-content">
                         <h3>Weather Dashboard</h3>
@@ -425,5 +424,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    document.addEventListener('click', function(e) {
+        document.querySelectorAll('.resume-dropdown-content').forEach(function(drop) {
+            if (!e.target.closest('.resume-dropdown')) drop.classList.remove('show');
+        });
+    });
+    </script>
 </body>
 </html>

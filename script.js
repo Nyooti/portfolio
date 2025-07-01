@@ -285,29 +285,4 @@ dropdownItems.forEach(item => {
     });
 });
 
-// Dynamic full-page background slider
-const heroBgImages = [
-    'images/background image image 1.jpg',
-    'images/background image 3.jpg',
-    'images/background image 2.jpg',
-    'images/image 5.jpg'
-];
-let currentHeroBgIndex = 0;
-const bodyElement = document.body;
-
-function cycleBodyBackground() {
-    if (bodyElement) {
-        // Start fade out
-        bodyElement.classList.add('bg-fade-out');
-        setTimeout(() => {
-            currentHeroBgIndex = (currentHeroBgIndex + 1) % heroBgImages.length;
-            bodyElement.style.backgroundImage = `url('${heroBgImages[currentHeroBgIndex]}')`;
-            // Fade in
-            bodyElement.classList.remove('bg-fade-out');
-        }, 1000); // Match the CSS transition duration
-        bodyElement.style.backgroundSize = 'cover';
-        bodyElement.style.backgroundPosition = 'center';
-        bodyElement.style.backgroundRepeat = 'no-repeat';
-    }
-}
-setInterval(cycleBodyBackground, 4000); 
+// (Dynamic background slider code removed) 
